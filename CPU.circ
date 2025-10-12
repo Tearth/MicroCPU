@@ -52,9 +52,59 @@
     <tool lib="4" name="Register"/>
   </toolbar>
   <circuit name="CLK">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="CLK"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="20" stroke="#000000" width="50" x="60" y="60"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="85" y="70">CLK</text>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="350,310" x="60" y="70"/>
+      <circ-port dir="out" pin="680,310" x="110" y="70"/>
+    </appear>
+    <comp lib="0" loc="(350,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="E"/>
+    </comp>
+    <comp lib="0" loc="(360,350)" name="Clock">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(680,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="P"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(440,330)" name="AND Gate"/>
+    <comp lib="1" loc="(550,330)" name="NOT Gate"/>
+    <comp lib="1" loc="(640,310)" name="AND Gate"/>
+    <wire from="(350,310)" to="(390,310)"/>
+    <wire from="(360,350)" to="(390,350)"/>
+    <wire from="(440,330)" to="(480,330)"/>
+    <wire from="(480,290)" to="(480,330)"/>
+    <wire from="(480,290)" to="(590,290)"/>
+    <wire from="(480,330)" to="(520,330)"/>
+    <wire from="(550,330)" to="(590,330)"/>
+    <wire from="(640,310)" to="(680,310)"/>
+  </circuit>
+  <circuit name="MAIN">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="MAIN"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(400,340)" name="Power"/>
+    <comp lib="0" loc="(510,250)" name="Power"/>
+    <comp lib="4" loc="(530,290)" name="J-K Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(430,330)" name="CLK"/>
+    <wire from="(400,340)" to="(440,340)"/>
+    <wire from="(490,340)" to="(520,340)"/>
+    <wire from="(510,250)" to="(510,300)"/>
+    <wire from="(510,300)" to="(510,320)"/>
+    <wire from="(510,300)" to="(520,300)"/>
+    <wire from="(510,320)" to="(520,320)"/>
+    <wire from="(580,300)" to="(620,300)"/>
   </circuit>
 </project>
