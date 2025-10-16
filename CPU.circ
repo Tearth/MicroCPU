@@ -56,43 +56,55 @@
     <a name="circuit" val="MAIN"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(230,280)" name="Constant">
+    <comp lib="0" loc="(120,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(420,390)" name="Constant">
       <a name="value" val="0x96"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(230,300)" name="Constant">
+    <comp lib="0" loc="(420,410)" name="Constant">
       <a name="value" val="0x96"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(230,320)" name="Constant">
+    <comp lib="0" loc="(420,430)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(230,340)" name="Constant"/>
-    <comp lib="0" loc="(230,360)" name="Constant">
+    <comp lib="0" loc="(420,450)" name="Constant"/>
+    <comp lib="0" loc="(420,470)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(230,380)" name="Constant">
+    <comp lib="0" loc="(420,490)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(230,400)" name="Constant">
+    <comp lib="0" loc="(420,510)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(230,420)" name="Constant">
+    <comp lib="0" loc="(420,530)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(230,440)" name="Constant">
+    <comp lib="0" loc="(420,550)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(490,280)" name="Splitter">
+    <comp lib="0" loc="(680,390)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp loc="(450,280)" name="ALU"/>
-    <wire from="(450,280)" to="(490,280)"/>
-    <wire from="(450,380)" to="(480,380)"/>
-    <wire from="(450,400)" to="(480,400)"/>
-    <wire from="(450,420)" to="(480,420)"/>
-    <wire from="(450,440)" to="(480,440)"/>
+    <comp lib="5" loc="(110,330)" name="Button">
+      <a name="label" val="STEP"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp loc="(260,300)" name="CLK"/>
+    <comp loc="(640,390)" name="ALU"/>
+    <wire from="(110,330)" to="(120,330)"/>
+    <wire from="(120,290)" to="(120,310)"/>
+    <wire from="(270,320)" to="(300,320)"/>
+    <wire from="(640,390)" to="(680,390)"/>
+    <wire from="(640,490)" to="(670,490)"/>
+    <wire from="(640,510)" to="(670,510)"/>
+    <wire from="(640,530)" to="(670,530)"/>
+    <wire from="(640,550)" to="(670,550)"/>
   </circuit>
   <circuit name="ALU">
     <a name="appearance" val="custom"/>
@@ -102,33 +114,33 @@
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">INPUT_A</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="65">INPUT_A</text>
       <rect height="4" stroke="none" width="10" x="50" y="78"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">INPUT_B</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="85">INPUT_B</text>
       <rect height="3" stroke="none" width="10" x="50" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">CARRY</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="105">CARRY</text>
       <rect height="3" stroke="none" width="10" x="50" y="119"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="124">OP_ADD</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="125">OP_ADD</text>
       <rect height="3" stroke="none" width="10" x="50" y="139"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">OP_SUB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="145">OP_SUB</text>
       <rect height="3" stroke="none" width="10" x="50" y="159"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="164">OP_AND</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="165">OP_AND</text>
       <rect height="3" stroke="none" width="10" x="50" y="179"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">OP_OR</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="185">OP_OR</text>
       <rect height="3" stroke="none" width="10" x="50" y="199"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="204">OP_XOR</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="205">OP_XOR</text>
       <rect height="3" stroke="none" width="10" x="50" y="219"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="224">OP_NOT</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="225">OP_NOT</text>
       <rect height="4" stroke="none" width="10" x="260" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="256" y="63">RESULT</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="257" y="65">RESULT</text>
       <rect height="3" stroke="none" width="10" x="260" y="159"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="164">CARRY_FLAG</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="257" y="164">CARRY_FLAG</text>
       <rect height="3" stroke="none" width="10" x="260" y="179"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="184">OFLOW_FLAG</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="257" y="184">OFLOW_FLAG</text>
       <rect height="3" stroke="none" width="10" x="260" y="199"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="204">SIGN_FLAG</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="257" y="204">SIGN_FLAG</text>
       <rect height="3" stroke="none" width="10" x="260" y="219"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="224">ZERO_FLAG</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="257" y="224">ZERO_FLAG</text>
       <rect fill="none" height="180" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
       <text dominant-baseline="alphabetic" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="146">ALU</text>
       <circ-anchor facing="east" x="270" y="60"/>
@@ -854,5 +866,70 @@
     <wire from="(980,740)" to="(990,740)"/>
     <wire from="(980,760)" to="(1100,760)"/>
     <wire from="(990,570)" to="(990,610)"/>
+  </circuit>
+  <circuit name="CLK">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="CLK"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="65">HALT</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="63" y="84">STEP</text>
+      <rect height="3" stroke="none" width="10" x="191" y="69"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="187" y="75">WAVE</text>
+      <rect fill="none" height="40" stroke="#000000" stroke-width="2" width="130" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="125" y="75">CLK</text>
+      <circ-anchor facing="east" x="190" y="50"/>
+      <circ-port dir="in" pin="270,320" x="50" y="60"/>
+      <circ-port dir="in" pin="270,360" x="50" y="80"/>
+      <circ-port dir="out" pin="550,330" x="200" y="70"/>
+    </appear>
+    <comp lib="0" loc="(270,280)" name="Clock">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(270,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="HALT"/>
+    </comp>
+    <comp lib="0" loc="(270,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="STEP"/>
+    </comp>
+    <comp lib="0" loc="(550,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="WAVE"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(320,320)" name="NOT Gate"/>
+    <comp lib="1" loc="(370,330)" name="OR Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(460,300)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(530,330)" name="OR Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <wire from="(270,280)" to="(380,280)"/>
+    <wire from="(270,320)" to="(290,320)"/>
+    <wire from="(270,360)" to="(330,360)"/>
+    <wire from="(320,320)" to="(340,320)"/>
+    <wire from="(330,340)" to="(330,360)"/>
+    <wire from="(330,340)" to="(340,340)"/>
+    <wire from="(330,360)" to="(480,360)"/>
+    <wire from="(370,330)" to="(380,330)"/>
+    <wire from="(380,280)" to="(380,290)"/>
+    <wire from="(380,290)" to="(430,290)"/>
+    <wire from="(380,310)" to="(380,330)"/>
+    <wire from="(380,310)" to="(430,310)"/>
+    <wire from="(460,300)" to="(480,300)"/>
+    <wire from="(480,300)" to="(480,320)"/>
+    <wire from="(480,320)" to="(500,320)"/>
+    <wire from="(480,340)" to="(480,360)"/>
+    <wire from="(480,340)" to="(500,340)"/>
+    <wire from="(530,330)" to="(550,330)"/>
   </circuit>
 </project>
