@@ -1,0 +1,18 @@
+loop:
+LDA 0x3E ; H ;
+OUTA
+LDA 0x5B ; E ;
+OUTB
+LDA 0x52 ; L ;
+OUTC
+LDA 0x77 ; O ;
+OUTD
+LDA 0x00
+OUTA
+LDA 0x00
+OUTB
+LDA 0x00
+OUTC
+LDA 0x00
+OUTD
+JMP &loop

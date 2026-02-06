@@ -1,0 +1,105 @@
+VAR a
+VAR b
+VAR c
+VAR n
+VAR i
+
+; n=6 ;
+
+LDA 0x06
+STA &n
+
+; a=0, b=1, c=0, i=0 ;
+
+fib:
+LDA 0x00
+STA &a
+STA &c
+STA &i
+LDA 0x01
+STA &b
+
+; main loop ;
+
+loop:
+LDA &a
+LDB &b
+ADD
+STA &c
+STB &a
+LDB &c
+STB &b
+
+; increment i ;
+
+LDA &i
+LDB 0x01
+ADD
+STA &i
+
+; clear output ;
+
+LDA 0x00
+OUTA
+OUTB
+OUTC
+OUTD
+
+; display new result ;
+
+out1:
+LDA &c
+LDB 0x01
+AND
+JNQ &out1_one
+LDA 0x77
+OUTD
+JMP &out2
+out1_one:
+LDA 0x24
+OUTD
+
+out2:
+LDA &c
+LDB 0x02
+AND
+JNQ &out2_one
+LDA 0x77
+OUTC
+JMP &out3
+out2_one:
+LDA 0x24
+OUTC
+
+out3:
+LDA &c
+LDB 0x04
+AND
+JNQ &out3_one
+LDA 0x77
+OUTB
+JMP &out4
+out3_one:
+LDA 0x24
+OUTB
+
+out4:
+LDA &c
+LDB 0x08
+AND
+JNQ &out4_one
+LDA 0x77
+OUTA
+JMP &next
+out4_one:
+LDA 0x24
+OUTA
+
+; next iteration or reset if i=6 ;
+
+next:
+LDA &i
+LDB &n
+CMP
+JNQ &loop
+JMP &fib
