@@ -15,6 +15,8 @@ While MicroCPU executes one stage per clock cycle to maintain design simplicity,
 
 All components are controlled by control signals, with their inputs/outputs connected to the shared 8-bit bus. This means that while it makes it easy to move data between them, it's important to allow only one part of the CPU at a time to write to the bus, to avoid any collisions.
 
+![CPU](/Docs/cpu.jpg)
+
 ### Registers
 
 A register is the most basic form of storing data in the processor, being able to hold 1 byte in the case of MicroCPU. Internally it's built using a serie of D latches, activated using fall edge of the clock.
