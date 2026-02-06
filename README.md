@@ -64,36 +64,36 @@ Decoding a loaded instruction is done by reading microinstructions stored in 4 m
 
 | Signal   | Control Word | Name                       | Description |
 |----------|--------------|----------------------------|-------------|
-| PCR      | 0x80000000   | Program Counter Read       | Reads value stored in Program Counter Register and writes it to the shared bus |
-| PCW      | 0x40000000   | Program Counter Write      | Reads value from shared bus and writes it into Program Counter Register |
-| PCI      | 0x20000000   | Program Counter Increment  | Increments value stored in Program Counter Register |
-| MAW      | 0x10000000   | Memory Address Write       | Reads value from shared bus and writes it into Memory Address Register |
-| IRW      | 0x08000000   | Instruction Register Write | Reads value from shared bus and writes it into Instruction Register |
-| MMR      | 0x04000000   | Memory Read                | Reads value from memory using address stored in Memory Address Register and writes it to the shared bus |
-| MMW      | 0x02000000   | Memory Write               | Reads value from shared bus and writes it to memory using address stored in Memory Address Register |
+| PCR      | 0x80000000   | Program Counter Read       | Reads value stored in the Program Counter Register and writes it to the shared bus |
+| PCW      | 0x40000000   | Program Counter Write      | Reads value from the shared bus and writes it to the Program Counter Register |
+| PCI      | 0x20000000   | Program Counter Increment  | Increments value stored in the Program Counter Register |
+| MAW      | 0x10000000   | Memory Address Write       | Reads value from the shared bus and writes it into Memory Address Register |
+| IRW      | 0x08000000   | Instruction Register Write | Reads value from the shared bus and writes it into Instruction Register |
+| MMR      | 0x04000000   | Memory Read                | Reads value from memory using address stored in the Memory Address Register and writes it to the shared bus |
+| MMW      | 0x02000000   | Memory Write               | Reads value from the shared bus and writes it to memory using address stored in the Memory Address Register |
 | ARR      | 0x01000000   | A Register Read            | Reads value stored in A Register and writes it to the shared bus |
-| ARW      | 0x00800000   | A Register Write           | Reads value from shared bus and writes it into A Register |
+| ARW      | 0x00800000   | A Register Write           | Reads value from the shared bus and writes it into A Register |
 | BRR      | 0x00400000   | B Register Read            | Reads value stored in B Register and writes it to the shared bus |
-| BRW      | 0x00200000   | B Register Write           | Reads value from shared bus and writes it into B Register |
-| ADD      | 0x00100000   | Addition                   | Adds values stored in registers A/B and outputs the result to shared bus |
-| SUB      | 0x00080000   | Substraction               | Substracts value stored in register B from the value stored in register A and outputs the result to shared bus |
-| NEG      | 0x00040000   | Negation                   | Negates the value stored in register A and outputs the result to shared bus |
-| AND      | 0x00020000   | Bitwise AND                | Performs bitwise AND operation with values stored in registers A/B and outputs the result to shared bus |
-| OR       | 0x00010000   | Bitwise OR                 | Performs bitwise OR operation with values stored in registers A/B and outputs the result to shared bus |
-| XOR      | 0x00008000   | Bitwise XOR                | Performs bitwise XOR operation with values stored in registers A/B and outputs the result to shared bus |
-| NOT      | 0x00004000   | Bitwise NOT                | Performs bitwise NOT operation with value stored in register A and outputs the result to shared bus |
-| SHL      | 0x00002000   | Shift Left                 | Performs a bitwise left shift operation with the value stored in register A and outputs the result to shared bus |
-| SHR      | 0x00001000   | Shift Right                | Performs a bitwise right shift operation with the value stored in register A and outputs the result to shared bus |
-| OAW      | 0x00000800   | Output A Write             | Reads value from shared bus and writes it into output register A |
-| OBW      | 0x00000400   | Output B Write             | Reads value from shared bus and writes it into output register B |
-| OCW      | 0x00000200   | Output C Write             | Reads value from shared bus and writes it into output register C |
-| ODW      | 0x00000100   | Output D Write             | Reads value from shared bus and writes it into output register D |
-| JEQ      | 0x00000080   | Jump If Equal              | Allows write to Program Counter if Zero Flag = 1 |
-| JNQ      | 0x00000040   | Jump If Not Equal          | Allows write to Program Counter if Zero Flag = 0 |
-| JGR      | 0x00000020   | Jump If Greater            | Allows write to Program Counter if Zero Flag = 0 and Sign Flag = Overflow Flag |
-| JGQ      | 0x00000010   | Jump If Greater Or Equal   | Allows write to Program Counter if Sign Flag = Overflow Flag |
-| JLE      | 0x00000008   | Jump If Less               | Allows write to Program Counter if Sign Flag != Overflow Flag |
-| JLQ      | 0x00000004   | Jump If Less Or Equal      | Allows write to Program Counter if Zero Flag = 1 or Sign Flag != Overflow Flag |
+| BRW      | 0x00200000   | B Register Write           | Reads value from the shared bus and writes it into B Register |
+| ADD      | 0x00100000   | Addition                   | Adds values stored in registers A/B and outputs the result to the shared bus |
+| SUB      | 0x00080000   | Substraction               | Substracts value stored the in the register B from the value stored in the register A and outputs the result to the shared bus |
+| NEG      | 0x00040000   | Negation                   | Negates the value stored the in the register A and outputs the result to the shared bus |
+| AND      | 0x00020000   | Bitwise AND                | Performs bitwise AND operation with values stored in registers A/B and outputs the result to the shared bus |
+| OR       | 0x00010000   | Bitwise OR                 | Performs bitwise OR operation with values stored in registers A/B and outputs the result to the shared bus |
+| XOR      | 0x00008000   | Bitwise XOR                | Performs bitwise XOR operation with values stored in registers A/B and outputs the result to the shared bus |
+| NOT      | 0x00004000   | Bitwise NOT                | Performs bitwise NOT operation with value stored the in the register A and outputs the result to the shared bus |
+| SHL      | 0x00002000   | Shift Left                 | Performs a bitwise left shift operation with the value stored the in the register A and outputs the result to the shared bus |
+| SHR      | 0x00001000   | Shift Right                | Performs a bitwise right shift operation with the value stored the in the register A and outputs the result to the shared bus |
+| OAW      | 0x00000800   | Output A Write             | Reads value from the shared bus and writes it to the output register A |
+| OBW      | 0x00000400   | Output B Write             | Reads value from the shared bus and writes it to the output register B |
+| OCW      | 0x00000200   | Output C Write             | Reads value from the shared bus and writes it to the output register C |
+| ODW      | 0x00000100   | Output D Write             | Reads value from the shared bus and writes it to the output register D |
+| JEQ      | 0x00000080   | Jump If Equal              | Allows write to the Program Counter if Zero Flag = 1 |
+| JNQ      | 0x00000040   | Jump If Not Equal          | Allows write to the Program Counter if Zero Flag = 0 |
+| JGR      | 0x00000020   | Jump If Greater            | Allows write to the Program Counter if Zero Flag = 0 and Sign Flag = Overflow Flag |
+| JGQ      | 0x00000010   | Jump If Greater Or Equal   | Allows write to the Program Counter if Sign Flag = Overflow Flag |
+| JLE      | 0x00000008   | Jump If Less               | Allows write to the Program Counter if Sign Flag != Overflow Flag |
+| JLQ      | 0x00000004   | Jump If Less Or Equal      | Allows write to the Program Counter if Zero Flag = 1 or Sign Flag != Overflow Flag |
 | RSC      | 0x00000002   | Reset Step Counter         | Sets Step Counter to 0 |
 | HLT      | 0x00000001   | Halt                       | Stops the main clock |
 
@@ -113,30 +113,30 @@ MicroCPU's machine code is composed of 32 instructions, each having a unique opc
 | JGQ      | 0x06   | &addr      | Jumps to the immediate address if Sign Flag = Overflow Flag |
 | JLE      | 0x07   | &addr      | Jumps to the immediate address if Sign Flag != Overflow Flag |
 | JLQ      | 0x08   | &addr      | Jumps to the immediate address if Zero Flag = 1 or Sign Flag != Overflow Flag |
-| LDA      | 0x09   | val        | Loads immediate value into register A |
-| LDA      | 0x0a   | &addr      | Loads value from memory at the immediate address into register A |
-| LDA      | 0x0b   | &&addr     | Loads value from memory at the dereferenced address into register A |
-| LDB      | 0x0c   | val        | Loads immediate value into register B |
-| LDB      | 0x0d   | &addr      | Loads value from memory at the immediate address into register B |
-| LDB      | 0x0e   | &&addr     | Loads value from memory at the dereferenced address into register B |
-| STA      | 0x0f   | &addr      | Moves value from register A into memory at the immediate address |
-| STA      | 0x10   | &&addr     | Moves value from register A into memory at the dereferenced address |
-| STB      | 0x11   | &addr      | Moves value from register B into memory at the immediate address |
-| STB      | 0x12   | &&addr     | Moves value from register B into memory at the dereferenced address |
-| ADD      | 0x13   | -          | Adds the values from registers A and B, then stores the result in register A |
-| SUB      | 0x14   | -          | Subtracts value in register B from value in register A, then stores the result in register A |
-| NEG      | 0x15   | -          | Negates the value in register A, then stores the result in register A |
-| AND      | 0x16   | -          | Performs bitwise AND operation with values stored in registers A/B, then stores the result in register A |
-| OR       | 0x17   | -          | Performs bitwise OR operation with values stored in registers A/B, then stores the result in register A |
-| XOR      | 0x18   | -          | Performs bitwise XOR operation with values stored in registers A/B, then stores the result in register A |
-| NOT      | 0x19   | -          | Performs bitwise XOR operation with value stored in register A, then stores the result in register A |
-| SHL      | 0x1a   | -          | Performs bitwise left shift operation with value stored in register A, then stores the result in register A |
-| SHR      | 0x1b   | -          | Performs bitwise right shift operation with value stored in register A, then stores the result in register A |
+| LDA      | 0x09   | val        | Loads immediate value to the register A |
+| LDA      | 0x0a   | &addr      | Moves value from memory at the immediate address to the register A |
+| LDA      | 0x0b   | &&addr     | Moves value from memory at the dereferenced address to the register A |
+| LDB      | 0x0c   | val        | Loads immediate value to the register B |
+| LDB      | 0x0d   | &addr      | Moves value from memory at the immediate address to the register B |
+| LDB      | 0x0e   | &&addr     | Moves value from memory at the dereferenced address to the register B |
+| STA      | 0x0f   | &addr      | Moves value from the register A into memory at the immediate address |
+| STA      | 0x10   | &&addr     | Moves value from the register A into memory at the dereferenced address |
+| STB      | 0x11   | &addr      | Moves value from the register B into memory at the immediate address |
+| STB      | 0x12   | &&addr     | Moves value from the register B into memory at the dereferenced address |
+| ADD      | 0x13   | -          | Adds the values from registers A and B, then stores the result in the register A |
+| SUB      | 0x14   | -          | Subtracts value in the register B from value in the register A, then stores the result in the register A |
+| NEG      | 0x15   | -          | Negates the value in the register A, then stores the result in the register A |
+| AND      | 0x16   | -          | Performs bitwise AND operation with values stored in registers A/B, then stores the result in the register A |
+| OR       | 0x17   | -          | Performs bitwise OR operation with values stored in registers A/B, then stores the result in the register A |
+| XOR      | 0x18   | -          | Performs bitwise XOR operation with values stored in registers A/B, then stores the result in the register A |
+| NOT      | 0x19   | -          | Performs bitwise XOR operation with value stored in the register A, then stores the result in the register A |
+| SHL      | 0x1a   | -          | Performs bitwise left shift operation with value stored in the register A, then stores the result in the register A |
+| SHR      | 0x1b   | -          | Performs bitwise right shift operation with value stored in the register A, then stores the result in the register A |
 | CMP      | 0x1c   | -          | Compares values stored in registers A/B and updates Flag Register |
-| OUTA     | 0x1d   | -          | Moves value from register A into output register A |
-| OUTB     | 0x1e   | -          | Moves value from register A into output register B |
-| OUTC     | 0x1f   | -          | Moves value from register A into output register C |
-| OUTD     | 0x20   | -          | Moves value from register A into output register D |
+| OUTA     | 0x1d   | -          | Moves value from the register A to the output register A |
+| OUTB     | 0x1e   | -          | Moves value from the register A to the output register B |
+| OUTC     | 0x1f   | -          | Moves value from the register A to the output register C |
+| OUTD     | 0x20   | -          | Moves value from the register A to the output register D |
 
 ### Assembler
 
@@ -189,3 +189,4 @@ A program can be compiled using CLI with two parameters pointing at the input an
 ```
 assembler.exe -in helo.src -out helo.bin
 ```
+
